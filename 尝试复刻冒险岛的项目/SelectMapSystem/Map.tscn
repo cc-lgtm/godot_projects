@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://SelectMapSystem/assets/Map.jpg" type="Texture" id=1]
+[ext_resource path="res://HUD/assets/cloudBG.png" type="Texture" id=2]
+[ext_resource path="res://SelectMapSystem/Map.gd" type="Script" id=3]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 4
+light_mode = 2
+
+[node name="Map" type="Node2D"]
+position = Vector2( -16, -4 )
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloudBg6" type="Sprite" parent="TextureRect"]
+position = Vector2( 999, 293 )
+rotation = 1.5708
+texture = ExtResource( 2 )
+
+[node name="CloudBg4" type="Sprite" parent="TextureRect"]
+position = Vector2( 28, 281 )
+rotation = 1.5708
+texture = ExtResource( 2 )
+
+[node name="CloudBg" type="Sprite" parent="TextureRect"]
+position = Vector2( 764, 569 )
+texture = ExtResource( 2 )
+
+[node name="CloudBg2" type="Sprite" parent="TextureRect"]
+position = Vector2( 316, 584 )
+texture = ExtResource( 2 )
+
+[node name="TempleOfTime" type="Button" parent="."]
+material = SubResource( 1 )
+margin_left = 16.0
+margin_top = 388.0
+margin_right = 190.0
+margin_bottom = 521.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_down" from="TempleOfTime" to="." method="_on_TempleOfTime_button_down"]

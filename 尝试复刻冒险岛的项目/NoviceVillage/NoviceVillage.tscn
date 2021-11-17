@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="NoviceVillage" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "This is a novice village, but it has not been developed yet!!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
